@@ -1,0 +1,40 @@
+public class EnergyBlaster {
+  public static final int MAX_BARS = 8;
+  private String mColor;
+  private int mBarsCount;
+
+  public EnergyBlaster(String color) {
+    mColor = color;
+    mBarsCount = 0;
+  }
+
+  public String getColor() {
+    return mColor;
+  }
+
+  public void fire() {
+    fire(1);
+  }
+
+  public void fire(int shots) {
+    if (mBarsCount - shots < 0) {
+      throw new IllegalArgumentException();
+    }
+    mBarsCount -= shots;
+  }
+
+  public void charge() {
+    while (!isFullyCharged()) {
+      mBarsCount++;
+    }
+  }
+
+  public boolean isBatteryEmpty() {
+    return mBarsCount == 0;
+  }
+
+  public boolean isFullyCharged() {
+    return mBarsCount == MAX_BARS;
+  }
+
+}
