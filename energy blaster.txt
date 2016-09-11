@@ -1,5 +1,5 @@
 public class EnergyBlaster {
-  public static final int MAX_BARS = 8;
+  public static final int MAX_BARS = 30;
   private String mColor;
   private int mBarsCount;
 
