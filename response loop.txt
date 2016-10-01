@@ -1,0 +1,23 @@
+String response = console.readLine("Do you understand do while loops?");
+
+
+
+
+String response;
+boolean isInvalidWord;
+do{
+  response = console.readLine("Do you understand do while loops?:  ");
+  isInvalidWord = (response.equalsIgnoreCase("No"));
+if (isInvalidWord) {
+ console.printf("Do you understand do while loops?:  \n\n");
+       }  
+      }while(isInvalidWord);
+
+
+
+
+
+
+
+if (isInvalidWord) {
+console.printf("Because you said %s, you passed the test!", response);
