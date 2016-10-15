@@ -1,0 +1,15 @@
+public class Chat {
+ public static final int MAX_CHAR = 140;
+  private String mText;
+    
+  public Chat(String text) {
+    mText = text;
+  }
+
+  public String getText() {
+    return mText;
+  }
+  public int getRemaininghar() {
+ return MAX_CHAR - mText.length();
+}
+}
